@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #ff7043;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff5722;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff7043;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ===== ĐẶT LỊCH TƯ VẤN ===== */
+.appointment-form {
+  background-color: #fff7f0;
+  border-left: 5px solid #ff914d;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  background-color: #fffefb;
+  border: 1px solid #ffc9a7;
+}
+
+.appointment-form button {
+  background-color: #ff914d;
+}
+
+.appointment-form button:hover {
+  background-color: #ff6f00;
+}
+
+/* ===== KHAI BÁO CHU KỲ (DÙNG SAU) ===== */
+.cycle-form {
+  background-color: #f0fff7;
+  border-left: 5px solid #00c292;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cycle-form input {
+  background-color: #f9fff5;
+  border: 1px solid #b2e8ce;
+}
+.btn-home {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--main-color);
+    color: rgb(240, 18, 18);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+.btn-home:hover {
+    background-color: var(--accent-color);
+}
+

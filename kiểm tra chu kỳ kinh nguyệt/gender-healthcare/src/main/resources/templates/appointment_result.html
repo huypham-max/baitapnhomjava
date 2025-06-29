@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin tư vấn đã đặt</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container appointment-form">
+    <h2>Đặt lịch thành công!</h2>
+    <p><strong>Họ và tên:</strong> <span th:text="${appointment.fullName}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${appointment.email}"></span></p>
+    <p><strong>Ngày hẹn:</strong> <span th:text="${appointment.date}"></span></p>
+    <p><strong>Giờ hẹn:</strong> <span th:text="${appointment.time}"></span></p>
+    <p><strong>Ghi chú:</strong> <span th:text="${appointment.note}"></span></p>
+
+    <a href="/" class="btn">Quay về trang chủ</a>
+</div>
+</body>
+</html>
