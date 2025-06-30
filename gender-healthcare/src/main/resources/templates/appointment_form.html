@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt lịch tư vấn</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<a href="/" class="btn-home">Trang chủ </a> 
+<div class="container appointment-form">
+    <h2>Đặt lịch tư vấn</h2>
+    <form action="#" th:action="@{/appointment}" th:object="${appointment}" method="post">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" th:field="*{fullName}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" required>
+
+        <label for="date">Ngày hẹn:</label>
+        <input type="date" id="date" th:field="*{date}" required>
+
+        <label for="time">Giờ hẹn:</label>
+        <input type="time" id="time" th:field="*{time}" required>
+
+        <label for="note">Ghi chú:</label>
+        <textarea id="note" th:field="*{note}" rows="4"></textarea>
+
+        <button type="submit">Xác nhận đặt lịch</button>
+    </form>
+</div>
+</body>
+</html>

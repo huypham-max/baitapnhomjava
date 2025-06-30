@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả chu kỳ</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Kết quả dự đoán</h2>
+    <p><strong>Ngày rụng trứng:</strong> <span th:text="${cycle.ovulationDate}"></span></p>
+    <p><strong>Khả năng thụ thai cao:</strong> từ <span th:text="${cycle.fertileStart}"></span> đến <span th:text="${cycle.fertileEnd}"></span></p>
+    <a href="/cycle" class="btn">Khai báo lại</a>
+</div>
+</body>
+</html>
