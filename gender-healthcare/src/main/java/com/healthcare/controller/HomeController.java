@@ -10,4 +10,9 @@ public class HomeController {
     public String homePage() {
         return "index"; // tên file index.html trong templates (bỏ .html)
     }
+
+    @GetMapping("/start")
+    public String startPage() {
+        return "start"; // trả về trang start.html
+    }
 }

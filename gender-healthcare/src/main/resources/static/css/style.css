@@ -1,176 +1,267 @@
-/* ===== CƠ BẢN TOÀN TRANG ===== */
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fefefe;
-  margin: 0;
-  padding: 0;
-  color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
 }
 
-/* ===== HEADER & TRANG CHỦ (index.html) ===== */
-header {
-  background-color: #ff7043;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 4px solid #ff5722;
+/* === Navbar === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4CAF50;
 }
 
-header h1 {
-  margin: 0 0 10px;
-  font-size: 30px;
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
-header p {
-  margin: 0;
-  font-size: 18px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-main {
-  max-width: 960px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 40px;
+.nav-links li a:hover {
+    color: #d4f8d4;
 }
 
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background-color: #ff914d;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s;
+/* === Intro Section === */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
 }
 
-.btn:hover {
-  background-color: #ff6f00;
-  transform: translateY(-2px);
+.intro img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
 }
 
-.illustration {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.intro-text {
+    max-width: 500px;
+    margin: 10px;
 }
 
+/* === Features Section === */
+.features {
+    background-color: #eef3f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* === CTA Section === */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta a {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* === Footer === */
 footer {
-  background-color: #eee;
-  color: #555;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-  margin-top: 60px;
-  border-top: 1px solid #ddd;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
 }
 
-/* ===== CÁC FORM KHÁC (KHÔNG DÙNG CHO INDEX) ===== */
-.container {
-  max-width: 600px;
-  margin: auto;
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+/* === Responsive === */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Reset và font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
 }
 
-h2 {
-  color: #ff7043;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px 12px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background-color: #ff7043;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #ff5722;
-}
-
-/* ===== ĐẶT LỊCH TƯ VẤN ===== */
-.appointment-form {
-  background-color: #fff7f0;
-  border-left: 5px solid #ff914d;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.appointment-form input,
-.appointment-form textarea {
-  background-color: #fffefb;
-  border: 1px solid #ffc9a7;
-}
-
-.appointment-form button {
-  background-color: #ff914d;
-}
-
-.appointment-form button:hover {
-  background-color: #ff6f00;
-}
-
-/* ===== KHAI BÁO CHU KỲ ===== */
-.cycle-form {
-  background-color: #f0fff7;
-  border-left: 5px solid #00c292;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.cycle-form input {
-  background-color: #f9fff5;
-  border: 1px solid #b2e8ce;
-}
-
-/* ===== NÚT QUAY LẠI TRANG CHỦ ===== */
+/* Nút trở về trang chủ */
 .btn-home {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: var(--main-color, #ff7043);
-  color: rgb(240, 18, 18);
-  text-decoration: none;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  transition: background-color 0.3s;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-home:hover {
-  background-color: var(--accent-color, #ffb27d);
+    background-color: #45a049;
+}
+
+/* Container form */
+.container {
+    max-width: 500px;
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Label và input */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Nút submit */
+button[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1976d2;
+}
+/* ========== ĐẶT LỊCH TƯ VẤN ========== */
+.container.appointment-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container.appointment-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.container.appointment-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.container.appointment-form input,
+.container.appointment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container.appointment-form button[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container.appointment-form button[type="submit"]:hover {
+    background-color: #43a047;
+}
+
+/* Nút quay về trang chủ */
+.btn-home {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #1976d2;
 }

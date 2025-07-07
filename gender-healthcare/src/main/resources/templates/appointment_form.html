@@ -6,7 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<a href="/" class="btn-home">Trang chủ </a> 
+<a th:href="@{/start}" class="btn-home">Trang chủ</a> 
 <div class="container appointment-form">
     <h2>Đặt lịch tư vấn</h2>
     <form action="#" th:action="@{/appointment}" th:object="${appointment}" method="post">

@@ -14,7 +14,7 @@
     <p><strong>Giờ hẹn:</strong> <span th:text="${appointment.time}"></span></p>
     <p><strong>Ghi chú:</strong> <span th:text="${appointment.note}"></span></p>
 
-    <a href="/" class="btn">Quay về trang chủ</a>
+   <a th:href="@{/start}" class="btn-home">Trang chủ</a>
 </div>
 </body>
 </html>

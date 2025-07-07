@@ -4,24 +4,61 @@
     <meta charset="UTF-8">
     <title>Trang chủ | Gender Healthcare</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với Hệ thống chăm sóc sức khỏe giới tính</h1>
-        <p>Giúp bạn theo dõi chu kỳ, đặt lịch tư vấn và chăm sóc bản thân tốt hơn.</p>
-    </header>
+   <!-- Navbar -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Gender Healthcare</div>
+        <ul class="nav-links">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/signup}">Sign Up</a></li>
+            <li><a th:href="@{/user/profile}">User</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <div class="btn-container">
-            <a href="/cycle" class="btn">🩺 Khai báo chu kỳ</a>
-            <a href="/appointment" class="btn">📅 Đặt lịch tư vấn</a>
+<!-- Giới thiệu -->
+<section class="intro">
+    <img th:src="@{/anh minh hoa.jpeg}" alt="Giới thiệu">
+    <div class="intro-text">
+        <h2>Chào mừng bạn đến với hệ thống chăm sóc sức khỏe giới tính</h2>
+        <p>Hệ thống giúp bạn theo dõi sức khỏe sinh sản, đặt lịch tư vấn, xét nghiệm STIs và hỗ trợ các vấn đề về giới tính một cách riêng tư, an toàn và hiệu quả.</p>
+    </div>
+</section>
+
+<!-- Tính năng -->
+<section class="features">
+    <h2>Tính năng nổi bật</h2>
+    <div class="feature-list">
+        <div class="feature-item">
+            <h3>Chu kỳ kinh nguyệt</h3>
+            <p>Theo dõi, nhắc nhở rụng trứng, thời gian uống thuốc.</p>
         </div>
+        <div class="feature-item">
+            <h3>Tư vấn trực tuyến</h3>
+            <p>Gặp chuyên gia về giới tính và sức khỏe sinh sản.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Xét nghiệm STIs</h3>
+            <p>Đăng ký dịch vụ và nhận kết quả nhanh chóng.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Hỏi đáp ẩn danh</h3>
+            <p>Gửi câu hỏi đến chuyên gia mà không lo lộ danh tính.</p>
+        </div>
+    </div>
+</section>
 
-        <img src="./anh minh hoa.jpeg" alt="Healthcare" class="illustration">
-    </main>
+<!-- CTA -->
+<section class="cta">
+    <a th:href="@{/start}">Bắt đầu ngay</a>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Gender Healthcare System - All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Gender Healthcare System | Bảo mật & Riêng tư là ưu tiên hàng đầu</p>
+</footer>
 </body>
 </html>
