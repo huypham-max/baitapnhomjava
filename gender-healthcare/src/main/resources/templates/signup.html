@@ -15,12 +15,30 @@
         <input type="text" id="username" th:field="*{username}" required>
 
         <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" th:field="*{password}" required>
+        <div style="position: relative;">
+            <input type="password" id="password" th:field="*{password}" required>
+            <button type="button" onclick="togglePassword()" style="
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+            ">👁️</button>
+        </div>
 
         <button type="submit">Đăng ký</button>
     </form>
 
     <p>Đã có tài khoản? <a th:href="@{/login}">Đăng nhập</a></p>
 </div>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById("password");
+        passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+</script>
 </body>
 </html>
