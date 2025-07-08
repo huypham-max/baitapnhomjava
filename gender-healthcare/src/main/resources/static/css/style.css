@@ -265,3 +265,67 @@ button[type="submit"]:hover {
 .btn-home:hover {
     background-color: #21e04a;
 }
+/* ========== ĐĂNG NHẬP & ĐĂNG KÝ ========== */
+.container.auth-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.container.auth-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.container.auth-form input[type="text"],
+.container.auth-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container.auth-form button[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #18dc53;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container.auth-form button[type="submit"]:hover {
+    background-color: #0eb243;
+}
+
+.container.auth-form p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.container.auth-form a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container.auth-form a:hover {
+    text-decoration: underline;
+}
