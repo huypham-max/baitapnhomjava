@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.healthcare.entity.User;
 import com.healthcare.repository.UserRepository;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class UserController {
 
@@ -46,10 +48,13 @@ public class UserController {
     @PostMapping("/login")
     public String processLogin(@RequestParam String username,
                                @RequestParam String password,
-                               Model model) {
+                               Model model,
+                               HttpSession session) {
         User user = userRepository.findByUsername(username);
         if (user != null && user.getPassword().equals(password)) {
-            model.addAttribute("username", user.getUsername());
+            session.setAttribute("user", user); // Lưu user vào session
+            model.addAttribute("user", user);
+            model.addAttribute("age", user.getAge()); // dùng hàm getAge() từ entity
             return "dashboard";
         } else {
             model.addAttribute("error", "Tên đăng nhập hoặc mật khẩu không đúng!");
@@ -59,8 +64,20 @@ public class UserController {
 
     // Trang dashboard người dùng
     @GetMapping("/dashboard")
-    public String showDashboard(Model model) {
-        // Bạn có thể truyền thêm thông tin người dùng nếu cần
+    public String showDashboard(HttpSession session, Model model) {
+        User user = (User) session.getAttribute("user");
+        if (user == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute("user", user);
+        model.addAttribute("age", user.getAge());
         return "dashboard";
+    }
+
+    // Xử lý đăng xuất
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate(); // Xoá session
+        return "redirect:/login";
     }
 }
