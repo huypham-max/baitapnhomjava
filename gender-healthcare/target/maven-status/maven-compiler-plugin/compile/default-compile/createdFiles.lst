@@ -1,0 +1,17 @@
+com\healthcare\controller\QuestionController.class
+com\healthcare\entity\Question.class
+com\healthcare\entity\Appointment.class
+com\healthcare\controller\UserController.class
+com\healthcare\entity\Cycle.class
+com\healthcare\entity\Consultant.class
+com\healthcare\controller\CycleController.class
+com\healthcare\repository\QuestionRepository.class
+com\healthcare\repository\UserRepository.class
+com\healthcare\controller\HomeController.class
+com\healthcare\GenderHealthcareApplication.class
+com\healthcare\repository\CycleRepository.class
+com\healthcare\controller\AppointmentController.class
+com\healthcare\entity\User.class
+com\healthcare\controller\QuestionPageController.class
+com\healthcare\repository\AppointmentRepository.class
+com\healthcare\repository\ConsultantRepository.class

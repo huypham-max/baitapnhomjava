@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <a th:href="@{/start}" class="btn-home">Trang chủ</a>
+    <a th:href="@{/logout}" class="btn-logout">Đăng xuất</a>
+
+
+    <div class="container">
+        <h2>Chào mừng, <span th:text="${user.username}">Người dùng</span>!</h2>
+        <p>Bạn đã đăng nhập thành công vào hệ thống.</p>
+
+        <div class="user-info">
+            <p><strong>Email:</strong> <span th:text="${user.email != null ? user.email : 'Chưa có'}">email@example.com</span></p>
+            <p><strong>Ngày sinh:</strong> 
+                <span th:if="${user.dateOfBirth != null}" th:text="${user.dateOfBirth}">2000-01-01</span>
+                <span th:if="${user.dateOfBirth == null}">Chưa có</span>
+            </p>
+            <p><strong>Tuổi:</strong> 
+                <span th:if="${age != null}" th:text="${age}">0</span>
+                <span th:if="${age == null}">Chưa rõ</span>
+            </p>
+        </div>
+
+        <h3>Chức năng:</h3>
+        <ul>
+            <li><a th:href="@{/cycle}">Khai báo chu kỳ</a></li>
+            <li><a th:href="@{/appointment}">Đặt lịch tư vấn</a></li>
+        </ul>
+    </div>
+</body>
+</html>
