@@ -329,3 +329,16 @@ footer {
         padding: 2rem;
     }
 }
+.btn-logout {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
