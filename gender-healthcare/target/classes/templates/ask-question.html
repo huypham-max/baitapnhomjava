@@ -1,31 +1,32 @@
-<!-- src/main/resources/templates/ask-question.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Đặt câu hỏi</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <h1>Đặt câu hỏi với tư vấn viên</h1>
+    <div class="container question-page">
+        <h1>Đặt câu hỏi với tư vấn viên</h1>
 
-    <form th:action="@{/question}" method="post">
-        <label for="content">Nội dung câu hỏi:</label><br>
-        <textarea id="content" name="content" rows="5" cols="50" required></textarea><br><br>
-        <button type="submit">Gửi câu hỏi</button>
-    </form>
+        <form th:action="@{/question}" method="post" class="question-form">
+            <label for="content">Nội dung câu hỏi:</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+            <button type="submit">Gửi câu hỏi</button>
+        </form>
 
-    <hr>
-
-    <h2>Câu hỏi đã gửi:</h2>
-    <div th:if="${#lists.isEmpty(questions)}">
-        <p>Chưa có câu hỏi nào.</p>
-    </div>
-    <div th:each="q : ${questions}">
-        <p><strong>Hỏi:</strong> <span th:text="${q.content}"></span></p>
-        <p><strong>Trả lời:</strong> <span th:text="${q.answer != null ? q.answer : 'Chưa có câu trả lời'}"></span></p>
         <hr>
-    </div>
 
-    <a th:href="@{/start}" class="btn-home">Trang chủ</a>
+        <h2>Câu hỏi đã gửi:</h2>
+        <div th:if="${#lists.isEmpty(questions)}">
+            <p>Chưa có câu hỏi nào.</p>
+        </div>
+        <div th:each="q : ${questions}" class="question-block">
+            <p><strong>Hỏi:</strong> <span th:text="${q.content}"></span></p>
+            <p><strong>Trả lời:</strong> <span th:text="${q.answer != null ? q.answer : 'Chưa có câu trả lời'}"></span></p>
+        </div>
+
+        <a th:href="@{/start}" class="btn-home">Trang chủ</a>
+    </div>
 </body>
 </html>
