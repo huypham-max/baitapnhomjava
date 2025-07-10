@@ -273,6 +273,158 @@ footer {
 
 .container.auth-form a:hover {
     text-decoration: underline;
+    color: #10b981;
+}
+
+/* === Home Button === */
+.btn-home {
+    display: inline-block;
+    margin: 2rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-home:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .intro img {
+        max-width: 100%;
+    }
+
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container {
+        margin: 2rem 1.5rem;
+        padding: 2rem;
+    }
+}
+.btn-logout {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+.btn-user {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-user:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+/* --- Ask Question Page Styling --- */
+.question-page {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.question-form {
+    margin-bottom: 30px;
+}
+
+.question-form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.question-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.question-form button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.question-form button:hover {
+    background: linear-gradient(135deg, #45a049, #3e9440);
+    transform: scale(1.03);
+}
+
+.question-block {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.btn-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #388e3c;
 }
 /* --- Ask Question Page Styling --- */
 .question-page {
