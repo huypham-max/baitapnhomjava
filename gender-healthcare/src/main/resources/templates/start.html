@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bắt đầu sử dụng</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .start-container {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .start-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .option {
+            background-color: white;
+            padding: 30px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .option a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f3f3f3;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Gender Healthcare</div>
+        <ul class="nav-links">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/signup}">Sign Up</a></li>
+            <li><a th:href="@{/dashboard}">User</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="start-container">
+    <h2>Bạn muốn làm gì?</h2>
+    <div class="start-options">
+        <div class="option">
+            <h3>Theo dõi chu kỳ kinh nguyệt</h3>
+            <p>Ghi nhận chu kỳ, xem lịch sử và dự đoán rụng trứng.</p>
+            <a th:href="@{/cycle}">Xem chu kỳ</a>   
+        </div>
+
+        <div class="option">
+            <h3>Đặt lịch tư vấn</h3>
+            <p>Chọn thời gian, gặp chuyên gia để được tư vấn.</p>
+            <a th:href="@{/appointment}">Đặt lịch tư vấn</a>
+        </div>
+
+        <div class="option">
+            <h3>Đặt câu hỏi với tư vấn viên</h3>
+            <p>Gửi thắc mắc của bạn và nhận câu trả lời từ chuyên gia.</p>
+            <a th:href="@{/question}">Gửi câu hỏi</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Gender Healthcare System</p>
+</footer>
+
+</body>
+</html>
