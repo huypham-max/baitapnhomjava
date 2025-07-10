@@ -37,6 +37,13 @@
             border-radius: 6px;
             font-weight: bold;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f3f3f3;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
@@ -47,7 +54,7 @@
         <ul class="nav-links">
             <li><a th:href="@{/}">Home</a></li>
             <li><a th:href="@{/signup}">Sign Up</a></li>
-            <a th:href="@{/dashboard}">User</a>
+            <li><a th:href="@{/dashboard}">User</a></li>
         </ul>
     </nav>
 </header>
@@ -60,10 +67,17 @@
             <p>Ghi nhận chu kỳ, xem lịch sử và dự đoán rụng trứng.</p>
             <a th:href="@{/cycle}">Xem chu kỳ</a>   
         </div>
+
         <div class="option">
             <h3>Đặt lịch tư vấn</h3>
             <p>Chọn thời gian, gặp chuyên gia để được tư vấn.</p>
             <a th:href="@{/appointment}">Đặt lịch tư vấn</a>
+        </div>
+
+        <div class="option">
+            <h3>Đặt câu hỏi với tư vấn viên</h3>
+            <p>Gửi thắc mắc của bạn và nhận câu trả lời từ chuyên gia.</p>
+            <a th:href="@{/question}">Gửi câu hỏi</a>
         </div>
     </div>
 </section>
